@@ -1,0 +1,13 @@
+.inner__holder{
+    height: 100%;
+    display: flex;
+
+    .sidebar__holder{
+        height: 100%;
+        min-width: 315px;
+    }
+    .chat__holder{
+        flex: 1;
+        background: white;
+    }
+}

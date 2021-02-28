@@ -1,0 +1,201 @@
+.sidebar{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .sidebar__header{
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding: 0 15px;
+        height: 63px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        border-bottom: 0.5px solid rgba(255,255,255,0.2);
+
+        &:hover{
+            background: #330c33;
+        }
+
+        .sidebar__header__left{
+            display: flex;
+            color: white;
+            align-items: center;
+
+            .icon{
+                font-size: 18px;
+                height: fit-content;
+                display: grid;
+                place-items: center;
+            }
+        }
+
+        .sidebar__header__right{
+            color: #3F0E40;
+
+            .icon{
+                font-size: 20px;
+                height: 30px;
+                width: 30px;
+                display: grid;
+                place-items: center;
+                background: white;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .sidebar__footer{
+        height: auto;
+        min-height: 300px;
+        // background: black;
+        padding: 15px 0;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar{
+            width: 9px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: rgba(255,255,255,0.6);
+            border-radius: 10px;
+        }
+
+        .top__menu{
+            display: flex;
+            width: 100%;
+            padding: 3px 15px;
+            color: white;
+            align-items: center;
+            min-height: 30px;
+            opacity: 0.7;
+            cursor: pointer;
+
+            &:hover{
+                background: #330c33;
+                opacity: 1;
+                &:hover:nth-child(2){
+                    background: none;
+                }
+            }
+
+            .add{
+                margin-left: auto;
+                opacity: 0;
+                width: fit-content !important;
+                padding: 2px;
+                border-radius: 2px;
+
+                &:hover{
+                    background: rgba(255,255,255,0.2);
+                }
+            }
+            &:hover .add{
+                opacity: 1;
+            }
+
+            .icon{
+                margin-right: 6px;
+                font-size: 17px;
+                height: fit-content;
+            }
+            h4{
+                font-size: 16px;
+                font-weight: normal;
+            }
+        }
+
+        .footer__channel__list{
+            .channel__name{
+                color: white;
+                display: flex;
+                align-items: center;
+                padding: 2px 13px;
+                padding-left: 50px;
+                min-height: 30px;
+                opacity: 0.8;
+                cursor: pointer;
+
+                h4{
+                    font-weight: normal;
+                }
+
+                h4:first-child{
+                    margin-right: 10px;
+                }
+
+                &:hover{
+                    background: #330c33;
+                    opacity: 1;
+                }
+
+                .icon{
+                    margin-right: 10px;
+                    font-size: 17px;
+                    height: fit-content;
+                    width: fit-content;
+                    padding: 2px;
+                    background: rgba(255,255,255,0.2);
+                    border-radius: 2px;
+                }
+            }
+            .active{
+                background: #1164A3;
+            }
+            
+        }
+
+        .footer__dm__list{
+            .dm{
+                color: white;
+                display: flex;
+                align-items: center;
+                padding: 2px 13px;
+                padding-left: 50px;
+                min-height: 30px;
+                opacity: 0.8;
+                cursor: pointer;
+
+                .icon{
+                    margin-right: 10px !important;
+                }
+                h4{
+                    font-weight: normal;
+                }
+
+                .close{
+                    font-size: 17px;
+                    height: fit-content;
+                    width: fit-content;
+                    margin-left: auto;
+                    opacity: 0;
+                }
+
+                &:hover{
+                    background: #330c33;
+
+                    .close{
+                        opacity: 0.7;
+
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .add{
+                    background-color: rgba(255,255,255,0.2);
+                    border-radius: 2px;
+                    font-size: 17px;
+                    height: fit-content;
+                    width: fit-content !important;
+                    padding: 3px;
+                }
+            }
+        }
+    }
+
+
+}
